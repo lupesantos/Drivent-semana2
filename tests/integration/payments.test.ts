@@ -169,7 +169,6 @@ describe("POST /payments/process", () => {
       const body = { ticketId: 1, cardData: generateCreditCardData() };
 
       const response = await server.post("/payments/process").set("Authorization", `Bearer ${token}`).send(body);
-
       expect(response.status).toEqual(httpStatus.NOT_FOUND);
     });
 

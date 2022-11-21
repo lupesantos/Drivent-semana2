@@ -47,7 +47,6 @@ describe("GET /tickets/types", () => {
       const token = await generateValidToken();
 
       const response = await server.get("/tickets/types").set("Authorization", `Bearer ${token}`);
-
       expect(response.body).toEqual([]);
     });
 
